@@ -1,27 +1,11 @@
-// import React, { useContext } from "react";
-
-// import TodoItem from "./TodoItem";
-// import { TodosContext } from "../store/todos-context";
-// import classes from "./Todos.module.css";
-
-// const Todos: React.FC = () => { // FC = FunctionComponent
-//   const todosCtx = useContext(TodosContext);
-
-//   return (
-//     <ul className={classes.todos}>
-//       {todosCtx.items.map((item) => (
-//         <TodoItem
-//           key={item.id}
-//           id={item.id}
-//           text={item.text}
-//           onRemoveTodo={todosCtx.removeTodo.bind(null, item.id)}
-//         />
-//       ))}
-//     </ul>
-//   );
-// };
-
 import React from "react";
+
+// type Todos
+// ----------------------------------------- //
+// React.FC(FunctionComoponents)で<{ items: string[] }>のジェネリクス型をreturnする。
+// <Todos items={["A", "B", "C"]} />のように記述してitems: string[]リストを受け取り
+// リスト表示する
+
 const Todos: React.FC<{ items: string[] }> = (props) => {
   return (
     <ul>
